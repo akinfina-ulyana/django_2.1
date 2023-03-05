@@ -5,7 +5,12 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 
 # Функция представления
 def index(request): # ссылка на класс HttpRequest, доступна вся текущая информация в рамках запроса
-    return HttpResponse("Страница приложения women")
+    return render(request, 'women/index.html/')
+
+
+
+
+
 
 def categories(request, catid):
     if (request.GET):
